@@ -1,67 +1,103 @@
-import React, { Component } from "react";
-import { StyleSheet, View, Text, TextInput, TouchableOpacity, ScrollView } from "react-native";
+import React from 'react';
+import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image } from 'react-native';
+import Constants from 'expo-constants';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default class Dashboard extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                {/* Header nav */}
-                <View style={styles.top}>
-                </View>
+export default function App() {
+    return (
+        <View style={{ flex: 1, marginTop: Constants.statusBarHeight }}>
+            {/* Header nav */}
+            <View style={styles.top}>
 
-                {/* Main view Section */}
-                <ScrollView style={styles.scroller}>
-                <View style={styles.mid}>
-                    <Text>What are you looking for ? </Text>
-                    <View>
-                        <Text>अंग  </Text>
-                    </View>
-                    <View>
-                        <Text>Consult with a doctor </Text>
-                    </View>
-                    <View>
-                        <Text>Pharmacy </Text>
-                    </View>
-                    <Text>Find top doctors in specialities </Text>
-                    <View>
-                        <View>
-                            <Text>Dentist </Text>
+            </View>
+            <SafeAreaView style={styles.scrollcontainer}>
+                <ScrollView style={styles.scrollView}>
+                    <View style={styles.mid}>
+                        <Text style={styles.midheader}>What are you looking for ? </Text>
+                        <TouchableOpacity style={styles.anghlogo}>
+                            <Image
+
+                                source={require('../assets/dashboard/anghlogo.png')}
+                            />
+                            <Image
+                                source={require('../assets/dashboard/anghhand.png')}
+                            />
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.doclogo}>
+                            <View style={{ flexDirection: 'column' }}>
+                                <Text
+                                    style={{ fontSize: 20, color: "#fff" }}
+                                >Consult with </Text>
+                                <Text style={{ fontSize: 20, color: "#fff" }}>
+                                    a doctor
+                            </Text>
+                            </View>
+                            <Image
+                                source={require('../assets/dashboard/plussign.png')}
+                            />
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.doclogo}>
+                            <View style={{ flexDirection: 'column' }}>
+                                <Text
+                                    style={{ fontSize: 20, color: "#fff" }}
+                                >Pharmacy       </Text>
+                                <Text
+                                    style={{ fontSize: 20, color: "#fff" }}
+                                >    </Text>
+                            </View>
+                            <Image
+                                source={require('../assets/dashboard/pharm.png')}
+                            />
+                        </TouchableOpacity>
+                        <Text style={{ fontSize: 20, marginTop: 20 }}>Find top doctors in specialities </Text>
+                        <View style={{ flexDirection: "row" }}>
+                            <TouchableOpacity style={{ backgroundColor: "#fd295a", justifyContent: "center", alignItems: "center", padding: 20, borderRadius: 10, margin: 7 }}>
+                                <Image
+                                    source={require('../assets/dashboard/teeth.png')}
+                                />
+                                <Text style={{ color: '#fff' }}>Dentist      </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={{ backgroundColor: "#fd295a", justifyContent: "center", alignItems: "center", padding: 20, borderRadius: 10, margin: 7, height: 91 }}>
+                                <Image
+                                    source={require('../assets/dashboard/box.png')}
+                                />
+                                <Text style={{ color: '#fff' }}>General      </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={{ backgroundColor: "#fd295a", justifyContent: "center", alignItems: "center", padding: 20, borderRadius: 10, margin: 7 }}>
+                                <Image
+                                    source={require('../assets/dashboard/man.png')}
+                                />
+                                <Text style={{ color: '#fff' }}>Pediatrician </Text>
+                            </TouchableOpacity>
+
                         </View>
-                        <View>
-                            <Text>General </Text>
-                        </View>
-                        <View>
-                            <Text>Pediatrician </Text>
-                        </View>
-                    </View>
-                    <View>
-                        <Text>medidocs PLUS</Text>
-                    </View>
+                        <TouchableOpacity style={{ backgroundColor: "#fd295a", paddingRight: 100, paddingLeft: 100, paddingTop: 10, paddingBottom: 10, borderRadius: 5 }}>
+                            <Image
+                                source={require('../assets/dashboard/plus.png')}
+                            />
+                        </TouchableOpacity>
                     </View>
                 </ScrollView>
+            </SafeAreaView>
+            {/* Footer */}
+            <View style={styles.bottom}>
 
-
-                {/* Footer */}
-                <View style={styles.bottom}>
-                   
-                </View>
             </View>
-        );
-    };
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1
+    scrollcontainer: {
+        flex: 0.8,
+    },
+    scrollView: {
+        backgroundColor: '#fff',
     },
     top: {
-        flex: 0.13,
-        backgroundColor: "rgba(255,111,97,1)",
-        justifyContent: "center",
+        flex: 0.1,
+        backgroundColor: "#fd295a",
         alignItems: "center"
-    },
-    scroller: {
-        flex: 0.77
     },
     mid: {
         flex: 1,
@@ -69,10 +105,38 @@ const styles = StyleSheet.create({
         justifyContent: "space-around",
         backgroundColor: "rgba(255,255,255,1)"
     },
+    anghlogo: {
+        marginTop: 20,
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
+        paddingTop: 30,
+        paddingBottom: 30,
+        paddingLeft: 100,
+        paddingRight: 100,
+        borderRadius: 15,
+        backgroundColor: "#fd295a",
+    },
+    doclogo: {
+        marginTop: 20,
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
+        paddingTop: 30,
+        paddingBottom: 30,
+        paddingLeft: 80,
+        paddingRight: 80,
+        borderRadius: 15,
+        backgroundColor: "#fd295a",
+    },
     bottom: {
         flex: 0.1,
         alignItems: "center",
         justifyContent: "space-around",
         backgroundColor: "#efe2e1"
     },
+    midheader: {
+        fontSize: 30,
+        marginTop: 20
+    }
 });

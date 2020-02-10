@@ -20,7 +20,7 @@ const AppNavigator = createStackNavigator ({
         screen: Dashboard
     }
 }, {
-    // initialRouteName: 'Dashboard',
+    initialRouteName: 'Dashboard',
     headerMode: 'none'
 })
 
