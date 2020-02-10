@@ -2,13 +2,25 @@ import React from 'react';
 import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image } from 'react-native';
 import Constants from 'expo-constants';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import FooterAng from '../components/FooterAng';
 
 export default function App() {
     return (
         <View style={{ flex: 1, marginTop: Constants.statusBarHeight }}>
             {/* Header nav */}
             <View style={styles.top}>
+                <TouchableOpacity style={{margin: 20}}>
+                    <Image
 
+                        source={require('../assets/dashboard/burger.png')}
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity style={{margin: 20}}>
+                    <Image
+
+                        source={require('../assets/dashboard/kochi.png')}
+                    />
+                </TouchableOpacity>
             </View>
             <SafeAreaView style={styles.scrollcontainer}>
                 <ScrollView style={styles.scrollView}>
@@ -80,9 +92,7 @@ export default function App() {
                 </ScrollView>
             </SafeAreaView>
             {/* Footer */}
-            <View style={styles.bottom}>
-
-            </View>
+            <FooterAng />
         </View>
     );
 }
@@ -97,7 +107,9 @@ const styles = StyleSheet.create({
     top: {
         flex: 0.1,
         backgroundColor: "#fd295a",
-        alignItems: "center"
+        alignItems: "center",
+        flexDirection: "row",
+        justifyContent: "space-between"
     },
     mid: {
         flex: 1,
