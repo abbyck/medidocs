@@ -8,7 +8,18 @@ export default function App() {
         <View style={{ flex: 1, marginTop: Constants.statusBarHeight }}>
             {/* Header nav */}
             <View style={styles.top}>
+                <TouchableOpacity style={{margin: 20}}>
+                    <Image
 
+                        source={require('../assets/dashboard/burger.png')}
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity style={{margin: 20}}>
+                    <Image
+
+                        source={require('../assets/dashboard/kochi.png')}
+                    />
+                </TouchableOpacity>
             </View>
             <SafeAreaView style={styles.scrollcontainer}>
                 <ScrollView style={styles.scrollView}>
@@ -97,7 +108,9 @@ const styles = StyleSheet.create({
     top: {
         flex: 0.1,
         backgroundColor: "#fd295a",
-        alignItems: "center"
+        alignItems: "center",
+        flexDirection: "row",
+        justifyContent: "space-between"
     },
     mid: {
         flex: 1,
