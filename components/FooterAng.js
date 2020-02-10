@@ -1,0 +1,24 @@
+import React, { Component } from 'react'
+import { View, StyleSheet, Image } from 'react-native'
+
+export default class FooterAng extends Component {
+    render() {
+        return (
+            <View style={styles.footer}>
+                <Image style={{ width: 50, height: 50 }} source={require('../assets/ang/history.png')}></Image>
+                <Image style={{ width: 50, height: 50 }} source={require('../assets/ang/md-list.png')}></Image>
+                <Image style={{ width: 50, height: 50 }} source={require('../assets/ang/chatbox.png')}></Image>
+                <Image style={{ width: 50, height: 50 }} source={require('../assets/ang/person.png')}></Image>
+            </View>
+        )
+    }
+}
+
+const styles = StyleSheet.create({
+    footer: {
+        flex: 0.5,
+        alignItems: "center",
+        justifyContent: "space-around",
+        backgroundColor: "rgba(255,255,255,1)"
+    }
+});

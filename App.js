@@ -5,6 +5,7 @@ import HomePage from './screens/HomePage';
 import OTPScreen from './screens/OTPScreen';
 import FillDetails from './screens/FillDetails';
 import Dashboard from './screens/Dashboard';
+import AngScreen from './screens/AngScreen'
 
 const AppNavigator = createStackNavigator ({
     Home: {
@@ -18,9 +19,12 @@ const AppNavigator = createStackNavigator ({
     },
     Dashboard: {
         screen: Dashboard
+    },
+    Ang : {
+        screen: AngScreen
     }
 }, {
-    // initialRouteName: 'Dashboard',
+    initialRouteName: 'Ang',
     headerMode: 'none'
 })
 
