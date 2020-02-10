@@ -20,10 +20,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-around",
-<<<<<<< HEAD
-        backgroundColor: "rgb(240, 226, 225)"
-=======
         backgroundColor: "#efe2e1",
->>>>>>> 1e717c6db090de5b288d0223267aa10dafbb8481
     }
 });
