@@ -24,11 +24,7 @@ const AppNavigator = createStackNavigator ({
         screen: AngScreen
     }
 }, {
-<<<<<<< HEAD
-    initialRouteName: 'Ang',
-=======
     initialRouteName: 'Dashboard',
->>>>>>> ff33fa77392dd92ed3a7c4acf197207f524b0da2
     headerMode: 'none'
 })
 

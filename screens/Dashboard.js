@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image } from 'react-native';
 import Constants from 'expo-constants';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import FooterAng from '../components/FooterAng';
 
 export default function App() {
     return (
@@ -91,9 +92,7 @@ export default function App() {
                 </ScrollView>
             </SafeAreaView>
             {/* Footer */}
-            <View style={styles.bottom}>
-
-            </View>
+            <FooterAng />
         </View>
     );
 }

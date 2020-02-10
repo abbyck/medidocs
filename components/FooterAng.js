@@ -16,9 +16,10 @@ export default class FooterAng extends Component {
 
 const styles = StyleSheet.create({
     footer: {
-        flex: 0.5,
+        flex: 0.1,
+        flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-around",
-        backgroundColor: "rgba(255,255,255,1)"
+        backgroundColor: "#efe2e1",
     }
 });
