@@ -5,10 +5,10 @@ export default class FooterAng extends Component {
     render() {
         return (
             <View style={styles.footer}>
-                <Image style={{ width: 50, height: 50 }} source={require('../assets/ang/history.png')}></Image>
-                <Image style={{ width: 50, height: 50 }} source={require('../assets/ang/md-list.png')}></Image>
-                <Image style={{ width: 50, height: 50 }} source={require('../assets/ang/chatbox.png')}></Image>
-                <Image style={{ width: 50, height: 50 }} source={require('../assets/ang/person.png')}></Image>
+                <Image style={{ width: 24, height: 24 }} source={require('../assets/ang/history.png')}></Image>
+                <Image style={{ width: 24, height: 24 }} source={require('../assets/ang/md-list.png')}></Image>
+                <Image style={{ width: 24, height: 24 }} source={require('../assets/ang/chatbox.png')}></Image>
+                <Image style={{ width: 24, height: 24 }} source={require('../assets/ang/person.png')}></Image>
             </View>
         )
     }
@@ -16,9 +16,10 @@ export default class FooterAng extends Component {
 
 const styles = StyleSheet.create({
     footer: {
-        flex: 0.5,
+        flex: 0.1,
+        flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-around",
-        backgroundColor: "rgba(255,255,255,1)"
+        backgroundColor: "rgb(240, 226, 225)"
     }
 });

@@ -1,20 +1,32 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, ImageBackground, Image } from "react-native";
 
+import Constants from 'expo-constants';
+
 import FooterAng from '../components/FooterAng'
+import { ScrollView } from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 export default class AngScreen extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <View style={{ flex: 1, marginTop: Constants.statusBarHeight }}>
                 <View style={styles.header}>
-                    <Image style={{ width: 50, height: 50 }} source={require('../assets/ang/angh.png')}></Image>
+                    <Image style={{ width: 53, height: 90, marginTop: 30 }} source={require('../assets/ang/angh.png')}></Image>
                     {/* <Image source={require('../assets/ang/')}></Image> */}
                 </View>
-                <ImageBackground source={require('../assets/ang/S.png')} style={{ width: '100%', height: '100%' }}>
+                <SafeAreaView style={styles.scrollcontainer}>
+                    <ScrollView style={styles.scrollView}>
+                        <Image
+                            style={{
+                                width: 1080, height: 2340
 
-                </ImageBackground>
+                            }}
+                            source={require('../assets/ang/S.jpg')}
+                        />
+                    </ScrollView>
+                </SafeAreaView>
                 <FooterAng></FooterAng>
             </View>
         )
@@ -22,14 +34,17 @@ export default class AngScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
     header: {
-        flex: 0.5,
-        backgroundColor: "rgba(255,111,97,1)",
+        flex: 0.1,
+        backgroundColor: "rgba(253, 41, 91, 1)",
         justifyContent: "center",
         alignItems: "center"
+    },
+    scrollcontainer: {
+        flex: 0.8,
+    },
+    map: {
+        flex: 1
     }
     // bottom: {
     //     flex: 0.5,

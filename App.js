@@ -7,7 +7,7 @@ import FillDetails from './screens/FillDetails';
 import Dashboard from './screens/Dashboard';
 import AngScreen from './screens/AngScreen'
 
-const AppNavigator = createStackNavigator ({
+const AppNavigator = createStackNavigator({
     Home: {
         screen: HomePage,
     },
@@ -20,15 +20,12 @@ const AppNavigator = createStackNavigator ({
     Dashboard: {
         screen: Dashboard
     },
-    Ang : {
+    Ang: {
         screen: AngScreen
     }
 }, {
-<<<<<<< HEAD
     initialRouteName: 'Ang',
-=======
-    initialRouteName: 'Dashboard',
->>>>>>> ff33fa77392dd92ed3a7c4acf197207f524b0da2
+    // initialRouteName: 'Dashboard',
     headerMode: 'none'
 })
 
