@@ -29,7 +29,7 @@ export default class FillDetails extends Component {
                     <TouchableOpacity style={styles.buttoncontainer}>
                             <Text 
                                 style={styles.caption} 
-                                onPress={() => this.props.navigation.navigate('OTP')}
+                                onPress={() => this.props.navigation.navigate('Dashboard')}
                             >NEXT </Text>
                         </TouchableOpacity>
                 </View>
