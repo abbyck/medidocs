@@ -26,7 +26,9 @@ export default function App() {
                 <ScrollView style={styles.scrollView}>
                     <View style={styles.mid}>
                         <Text style={styles.midheader}>What are you looking for ? </Text>
-                        <TouchableOpacity style={styles.anghlogo}>
+                        <TouchableOpacity 
+onPress={() => this.props.navigation.navigate('Ang')}
+style={styles.anghlogo}>
                             <Image
 
                                 source={require('../assets/dashboard/anghlogo.png')}
